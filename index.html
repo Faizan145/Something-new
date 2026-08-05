@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0a0a1a" />
+  <title>Happy Birthday My Queen ❤️</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Custom Luxury Cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- Floating Music Button (Glassmorphism) -->
+  <button class="music-btn" id="musicBtn" aria-label="Play or Pause Music">
+    <span class="music-icon">🎵</span>
+    <span class="music-text">Play Music</span>
+  </button>
+
+  <!-- Hidden Audio (continues across pages, never restarts) -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="music.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- ==================== PAGE 0: LOADING ==================== -->
+  <section class="page page-loading active" id="pageLoading">
+    <div class="loading-bg">
+      <div class="stars" id="starsLoading"></div>
+      <div class="moon moon-loading"></div>
+      <div class="golden-particles" id="particlesLoading"></div>
+    </div>
+    <div class="loading-content">
+      <div class="loading-ring">
+        <div class="ring-inner"></div>
+      </div>
+      <p class="loading-text">Preparing Your Surprise...</p>
+      <div class="loading-bar">
+        <div class="loading-progress" id="loadingProgress"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 1: GIFT BOX ==================== -->
+  <section class="page page-gift" id="pageGift">
+    <div class="bg-layer">
+      <div class="stars" id="starsGift"></div>
+      <div class="moon"></div>
+      <div class="clouds" id="cloudsGift"></div>
+      <div class="fireflies" id="firefliesGift"></div>
+      <div class="petals" id="petalsGift"></div>
+      <div class="golden-particles" id="particlesGift"></div>
+    </div>
+
+    <div class="gift-scene">
+      <h1 class="gift-title">❤️ Click To Open Your Surprise ❤️</h1>
+
+      <div class="gift-container" id="giftContainer">
+        <div class="gift-box" id="giftBox">
+          <div class="gift-lid" id="giftLid">
+            <div class="lid-top"></div>
+            <div class="lid-front"></div>
+            <div class="bow">
+              <div class="bow-center"></div>
+              <div class="bow-left"></div>
+              <div class="bow-right"></div>
+            </div>
+          </div>
+          <div class="gift-body">
+            <div class="ribbon-v"></div>
+            <div class="ribbon-h"></div>
+          </div>
+          <div class="gift-glow"></div>
+        </div>
+      </div>
+
+      <!-- Explosion particles container -->
+      <div class="explosion" id="explosion"></div>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 2: BIRTHDAY ANNOUNCEMENT ==================== -->
+  <section class="page page-announce" id="pageAnnounce">
+    <div class="bg-layer">
+      <div class="stars" id="starsAnnounce"></div>
+      <div class="moon moon-large"></div>
+      <div class="clouds" id="cloudsAnnounce"></div>
+      <div class="floating-hearts" id="heartsAnnounce"></div>
+      <div class="golden-particles" id="particlesAnnounce"></div>
+      <div class="light-rays"></div>
+    </div>
+
+    <div class="announce-content">
+      <p class="announce-today">Today is</p>
+      <h1 class="announce-date">22nd August</h1>
+      <div class="sparkle-line">✨</div>
+      <h2 class="announce-queen">Today is My Queen's Birthday ❤️</h2>
+      <button class="lux-btn" id="btnToNote">Continue &lt;3</button>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 3: LOVE NOTE ==================== -->
+  <section class="page page-note" id="pageNote">
+    <div class="bg-layer">
+      <div class="stars" id="starsNote"></div>
+      <div class="moon"></div>
+      <div class="fog"></div>
+      <div class="floating-hearts" id="heartsNote"></div>
+      <div class="petals" id="petalsNote"></div>
+    </div>
+
+    <div class="note-wrapper">
+      <div class="note-card glass">
+        <div class="note-inner" id="noteInner">
+          <!-- Lines will be injected by JS for typewriter effect -->
+        </div>
+      </div>
+      <button class="lux-btn hidden" id="btnToGallery">Continue &lt;3</button>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 4: PHOTO GALLERY ==================== -->
+  <section class="page page-gallery" id="pageGallery">
+    <div class="bg-layer">
+      <div class="stars" id="starsGallery"></div>
+      <div class="moon"></div>
+      <div class="golden-particles" id="particlesGallery"></div>
+      <div class="petals" id="petalsGallery"></div>
+      <div class="fireflies" id="firefliesGallery"></div>
+    </div>
+
+    <div class="gallery-content">
+      <div class="gallery-title-wrap">
+        <h2 class="gallery-title glow-text">❤️ Happy Birthday ❤️</h2>
+        <p class="gallery-subtitle">Love Of My Life</p>
+        <h1 class="gallery-name glow-text">IQRA</h1>
+      </div>
+
+      <div class="photo-grid">
+        <div class="photo-frame" data-index="0">
+          <div class="photo-inner">
+            <img src="photo1.jpg" alt="Iqra 1" loading="lazy" />
+            <div class="photo-reflection"></div>
+          </div>
+        </div>
+        <div class="photo-frame" data-index="1">
+          <div class="photo-inner">
+            <img src="photo2.jpg" alt="Iqra 2" loading="lazy" />
+            <div class="photo-reflection"></div>
+          </div>
+        </div>
+        <div class="photo-frame" data-index="2">
+          <div class="photo-inner">
+            <img src="photo3.jpg" alt="Iqra 3" loading="lazy" />
+            <div class="photo-reflection"></div>
+          </div>
+        </div>
+        <div class="photo-frame" data-index="3">
+          <div class="photo-inner">
+            <img src="photo4.jpg" alt="Iqra 4" loading="lazy" />
+            <div class="photo-reflection"></div>
+          </div>
+        </div>
+      </div>
+
+      <button class="lux-btn" id="btnToVideo">Continue &lt;3</button>
+    </div>
+  </section>
+
+  <!-- ==================== PAGE 5: VIDEO ==================== -->
+  <section class="page page-video" id="pageVideo">
+    <div class="video-container">
+      <video id="mainVideo" muted playsinline preload="auto">
+        <source src="video.mp4" type="video/mp4" />
+      </video>
+      <div class="video-overlay"></div>
+    </div>
+    <button class="lux-btn video-continue hidden" id="btnToEnding">Continue &lt;3</button>
+  </section>
+
+  <!-- ==================== PAGE 6: EMOTIONAL ENDING ==================== -->
+  <section class="page page-ending" id="pageEnding">
+    <div class="bg-layer">
+      <div class="stars" id="starsEnding"></div>
+      <div class="moon moon-large"></div>
+      <div class="fireflies" id="firefliesEnding"></div>
+      <div class="petals" id="petalsEnding"></div>
+      <div class="golden-particles" id="particlesEnding"></div>
+      <div class="floating-hearts" id="heartsEnding"></div>
+      <canvas id="fireworksCanvas"></canvas>
+    </div>
+
+    <div class="ending-content" id="endingContent">
+      <h1 class="ending-line glow-text">Enjoy Your Day My Love ❤️</h1>
+      <h2 class="ending-line">Happy Birthday My Queen</h2>
+      <p class="ending-line">May Allah Bless You Always</p>
+      <p class="ending-line">I Love You More Than Words Can Ever Explain</p>
+      <p class="ending-line">Thank You For Being My Everything</p>
+      <p class="ending-line forever">Forever Yours</p>
+      <h3 class="ending-line final-sign">❤️ Your Loving Husband Faizan ❤️</h3>
+    </div>
+
+    <!-- Final fade to black overlay -->
+    <div class="fade-to-black" id="fadeToBlack"></div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
